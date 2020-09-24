@@ -21,6 +21,11 @@ readTextFile("../languages.json", function(text) {
         languages.forEach(l => {
             if (l.tipo == langBrowser) {
                 idText.innerText = l.texto;
+            } else {
+                // Podemos adicionar mais uma linha no json para mudar essa frase de acordo com a linguagem do navegador...
+                // mas depois eu faço isso, deu uma preguiça agora
+
+                idText.innerText = 'Infelizmente, a linguagem do seu navegador ainda não é suportada. :('
             }
         })
 
