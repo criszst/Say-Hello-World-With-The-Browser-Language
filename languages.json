@@ -1,8 +1,4 @@
 [{
-        "tipo": "pt-BR",
-        "texto": "Olá Mundo!"
-    },
-    {
 
         "tipo": "ar",
         "texto": "مرحبا بالعالم!"
@@ -26,6 +22,10 @@
     {
         "tipo": "fr",
         "texto": "Bonjour le monde!"
+    },
+    {
+        "tipo": "pt-BR",
+        "texto": "Olá Mundo!"
     },
     {
         "tipo": "zh-CN",

@@ -46,4 +46,12 @@ readTextFile("../languages.json", function(text) {
          }
      } */
 
+
+    /* for (let i = 0; i <= languages.length; i++) {
+         if (languages[i].tipo == langBrowser) {
+            idText.innerText = languages[i].texto;
+            break;
+         }
+     } */
+
 });
