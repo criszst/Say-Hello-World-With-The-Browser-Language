@@ -37,7 +37,7 @@ readTextFile("../languages.json", function(text) {
 
         if (!idText.innerText) {
 
-            idText.innerText = 'Hmmm... Por algum motivo eu não consegui capturar a sua linguagem do navegador...'
+            idText.innerText = 'Hmmm... Por algum motivo eu não consegui capturar a sua linguagem do navegador... Talvez ela ainda não seja suportada...'
             langDetectada.removeChild(langDetectada)
 
         }
