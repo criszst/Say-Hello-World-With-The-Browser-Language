@@ -1,38 +1,153 @@
-[{
+[
 
+    {
         "tipo": "ar",
         "texto": "مرحبا بالعالم!"
     },
-    {
-        "tipo": "de",
-        "texto": "Hallo Welt!"
-    },
+
     {
         "tipo": "da",
         "texto": "Hej Verden!"
     },
+
+    {
+        "tipo": "de",
+        "texto": "Hallo Welt!"
+    },
+
+    {
+        "tipo": "el",
+        "texto": "Γειά σου Κόσμε!"
+    },
+
     {
         "tipo": "en",
         "texto": "Hello Word!"
     },
+
     {
         "tipo": "es",
         "texto": "¡Hola mundo!"
     },
+
+    {
+        "tipo": "ko",
+        "texto": "안녕하세요!"
+    },
+
+    {
+        "tipo": "sk",
+        "texto": "Ahoj Svet!"
+    },
+
+    {
+        "tipo": "sl",
+        "texto": "Pozdravljen, svet!"
+    },
+
+    {
+        "tipo": "fi",
+        "texto": "Hei maailma!"
+    },
+
     {
         "tipo": "fr",
         "texto": "Bonjour le monde!"
     },
+
+    {
+        "tipo": "nl",
+        "texto": "Hallo Wereld!"
+    },
+
+    {
+        "tipo": "nl",
+        "texto": "Hallo Wereld!"
+    },
+
+    {
+        "tipo": "hu",
+        "texto": "Helló Világ!"
+    },
+
+    {
+        "tipo": "id",
+        "texto": "Halo Dunia!"
+    },
+
+    {
+        "tipo": "it",
+        "texto": "Ciao mondo!"
+    },
+
+    {
+        "tipo": "ja",
+        "texto": "こんにちは世界"
+    },
+
+    {
+        "tipo": "pl",
+        "texto": "Witaj świecie!"
+    },
+
     {
         "tipo": "pt-BR",
         "texto": "Olá Mundo!"
     },
+
+    {
+        "tipo": "pt-PT",
+        "texto": "Olá Mundo!"
+    },
+
+    {
+        "tipo": "ro",
+        "texto": "Salut Lume!"
+    },
+
+    {
+        "tipo": "ru",
+        "texto": "Привет мир!"
+    },
+
+    {
+        "tipo": "sr-Cyrl",
+        "texto": "Здраво Свете!"
+    },
+
+    {
+        "tipo": "sr",
+        "texto": "Здраво Свете!"
+    },
+
+    {
+        "tipo": "sv",
+        "texto": "Hej världen!"
+    },
+
+    {
+        "tipo": "th",
+        "texto": "สวัสดีชาวโลก!"
+    },
+
+    {
+        "tipo": "cs",
+        "texto": "Ahoj světe!"
+    },
+
+    {
+        "tipo": "tr",
+        "texto": "Selam Dünya!"
+    },
+
     {
         "tipo": "zh-CN",
         "texto": "你好，世界!"
     },
+
     {
         "tipo": "zh-TW",
         "texto": "你好，世界"
     }
+
 ]
