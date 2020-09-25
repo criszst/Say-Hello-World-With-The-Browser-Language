@@ -44,7 +44,7 @@ readTextFile("../languages.json", function(text) {
 
     } catch (err) {
         // Podemos adicionar mais uma linha no json para mudar essa frase de acordo com a linguagem do navegador...
-        // mas depois eu faço isso, deu uma preguiça agora
+        // mas depois eu tento fazer isso, deu uma preguiça agora
 
         const idText = document.getElementById('text');
 
