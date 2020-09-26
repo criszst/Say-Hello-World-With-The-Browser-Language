@@ -10,7 +10,7 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 
-readTextFile("../languages.json", function(text) {
+readTextFile("../languages.json", async function(text) {
     try {
 
         const langBrowser = navigator.language
@@ -24,8 +24,8 @@ readTextFile("../languages.json", function(text) {
         languages.forEach(l => {
             if (l.tipo == langBrowser) {
 
-                langDetectada.innerText = `Say "Hello World" with the browser language | ${l.tipo}`
                 idText.innerText = l.texto
+                langDetectada.innerText = `Say "Hello World" with the browser language | ${l.tipo}`
 
             } else if (!l.tipo == langBrowser) {
 
