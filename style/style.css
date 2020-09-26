@@ -1,4 +1,48 @@
-h1 {
+body {
+    background: #0a2a43;
+    min-height: 1500px;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #0a2a43, transparent);
+    z-index: 10000;
+}
+
+section:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: #0a2a43;
+    z-index: 10000;
+    mix-blend-mode: color;
+}
+
+#text {
+    position: relative;
+    color: #fff;
+    font-size: 10em;
+    z-index: 1;
     font-family: cursive;
-    text-shadow: black;
+}
+
+#end {
+    z-index: 2;
 }

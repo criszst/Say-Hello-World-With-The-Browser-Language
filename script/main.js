@@ -24,31 +24,32 @@ readTextFile("../languages.json", function(text) {
         languages.forEach(l => {
             if (l.tipo == langBrowser) {
 
-                idText.innerText = l.texto;
-                langDetectada.innerText = l.tipo
+                langDetectada.innerText = `Say "Hello World" with the browser language | ${l.tipo}`
+                idText.innerText = l.texto
 
             } else if (!l.tipo == langBrowser) {
 
                 idText.innerText = 'Infelizmente, essa linguagem do seu navegador ainda não é suportada. :('
-                langDetectada.removeChild(langDetectada)
+                langDetectada.parentNode.removeChild(langDetectada)
 
             }
         })
 
         if (!idText.innerText) {
 
-            idText.innerText = 'Hmmm... Por algum motivo eu não consegui capturar a sua linguagem do navegador...'
-            langDetectada.removeChild(langDetectada)
+            idText.innerText = 'Hmmm... Por algum motivo eu não consegui capturar a sua linguagem do navegador... Talvez a sua linguagem ainda não seja suportada... :/'
+            langDetectada.parentNode.removeChild(langDetectada)
 
         }
 
     } catch (err) {
         // Podemos adicionar mais uma linha no json para mudar essa frase de acordo com a linguagem do navegador...
-        // mas depois eu faço isso, deu uma preguiça agora
+        // mas depois eu tento fazer isso, deu uma preguiça agora
 
         const idText = document.getElementById('text');
 
-        idText.innerText = `${err.code}\n Wups, parece que ocorreu algum erro! :/`.style.color = 'RED'
+        idText.style.color = 'RED'
+        idText.innerText = `Código: ${err.code ? 'Sem código' : err.code}\n Wups, parece que ocorreu algum erro! :/`
 
         console.log(err)
     }

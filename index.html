@@ -16,8 +16,58 @@
 <body>
     <div class="container">
 
-        <h1 style="text-align: center; margin-top: 300px;" id="text"></h1>
-        <p style="text-align: center; margin-top: 10px; margin-left: 10px;" id="langDetectada"></p>
+        <div id="end">
+            <section>
+                <h1 style="text-align: center; margin-top: -300px; margin-left: 50px" id="text"></h1>
+
+                <script type="text/javascript">
+                    let text = document.getElementById('text');
+
+                    window.addEventListener('scroll', function() {
+                        var value = window.scrollY;
+                        text.style.top = value * 1 + 'px';
+                    })
+                </script>
+
+            </section>
+
+        </div>
+
+
+        <div>
+            <div style="color: white; text-align: center ;margin-top: 150px">
+                <h1 id="langDetectada"></h1>
+
+                <p>
+
+                    Este site detecta a linguagem do seu navegador e fala "Hello World" com a linguagem detectada. Apenas um simples site :)
+                    <br>Uma ideia inspirada no <a href=" https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Hello-App.md">repositório de Florin Pop</a></br>
+
+                </p>
+
+            </div>
+
+
+            <div style="border-color: #0a2a43; margin-left: 38%; width: 18rem;" class="card">
+                <img class="card-img-top" src="https://img.ibxk.com.br/2020/06/15/15112221306044.jpg" alt="Github image">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">Github</h5>
+                    <p class="card-text">
+                        Clique no botão abaixo para ir ao repositório deste site. Assim, você poderá saber como ele foi feito! :)
+                    </p>
+
+                    <a href="https://github.com/Adrian-Cristian/Say-Hello-World-With-The-Browser-Language" target="_blank" class="btn btn-primary">Ir</a>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
 
     </div>
 
