@@ -10,7 +10,7 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 
-readTextFile("../languages.json", async function(text) {
+readTextFile("../languages.json", function(text) {
     try {
 
         const langBrowser = navigator.language
@@ -37,8 +37,14 @@ readTextFile("../languages.json", async function(text) {
 
         if (!idText.innerText) {
 
+            <<
+            << << < HEAD
             idText.innerText = 'Hmmm... Por algum motivo eu não consegui capturar a sua linguagem do navegador... Talvez a sua linguagem ainda não seja suportada... :/'
-            langDetectada.parentNode.removeChild(langDetectada)
+            langDetectada.parentNode.removeChild(langDetectada) ===
+                === =
+                idText.innerText = 'Hmmm... Por algum motivo eu não consegui capturar a sua linguagem do navegador... Talvez ela ainda não seja suportada...'
+            langDetectada.removeChild(langDetectada) >>>
+                >>> > aaab4312ace6e235c794d71d47dd99f72ec6ea9a
 
         }
 
