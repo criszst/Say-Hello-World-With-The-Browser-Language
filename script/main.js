@@ -1,3 +1,21 @@
+function reloadBody(text) {
+    const div = document.getElementById('divContainer')
+    div.parentNode.removeChild(div)
+
+    document.body.innerHTML = text
+
+
+    document.body.style.color = 'WHITE'
+
+    document.body.style.textAlign = 'center'
+
+    document.body.style.height = '350px'
+
+    document.body.style.marginTop = '300px'
+
+    document.body.style.fontSize = '100px'
+}
+
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
@@ -9,6 +27,7 @@ function readTextFile(file, callback) {
     }
     rawFile.send(null);
 }
+
 
 readTextFile("../languages.json", function(text) {
     try {
@@ -28,28 +47,22 @@ readTextFile("../languages.json", function(text) {
                 langDetectada.innerText = `Say "Hello World" with the browser language | ${l.tipo}`
 
             } else if (!l.tipo == langBrowser) {
-
-                idText.innerText = 'Infelizmente, essa linguagem do seu navegador ainda não é suportada. :('
-                langDetectada.parentNode.removeChild(langDetectada)
-
+                reloadBody('<h1>' + 'Infelizmente, essa linguagem do seu navegador ainda não é suportada. :(' + '</h1>')
             }
         })
 
+
         if (!idText.innerText) {
-
-            idText.innerText = 'Hmmm... Por algum motivo eu não consegui capturar a sua linguagem do navegador... Talvez a sua linguagem ainda não seja suportada... :/'
-            langDetectada.parentNode.removeChild(langDetectada)
-
+            reloadBody('<h1>' + 'Hmmm... Por algum motivo eu não consegui capturar a sua linguagem do navegador... Talvez a sua linguagem ainda não seja suportada... :/' + '</h1>')
         }
+
 
     } catch (err) {
         // Podemos adicionar mais uma linha no json para mudar essa frase de acordo com a linguagem do navegador...
         // mas depois eu tento fazer isso, deu uma preguiça agora
 
-        const idText = document.getElementById('text');
-
-        idText.style.color = 'RED'
-        idText.innerText = `Código: ${err.code ? 'Sem código' : err.code}\n Wups, parece que ocorreu algum erro! :/`
+        reloadBody('<h1>' + `Código: ${err.code ? 'Sem código' : err.code}\n Wups, parece que ocorreu algum erro! :/` + '</h1>')
+        document.body.style.color = 'RED'
 
         console.log(err)
     }
