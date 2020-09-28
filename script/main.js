@@ -39,26 +39,27 @@ readTextFile("../languages.json", function(text) {
 
         const idText = document.getElementById('text')
         const langDetectada = document.getElementById('langDetectada');
+
         //  const navigatorLanguages = document.getElementById('navigatorLanguages');
 
+        let lang = false
 
         languages.forEach(l => {
             if (l.tipo == langBrowser) {
 
                 idText.innerText = l.texto
                 langDetectada.innerText = `Say "Hello World" with the browser language | ${l.tipo}`
-                    // navigatorLanguages.innerText = `${activeLangs.join('\n')}`
+                lang = true
 
+                // navigatorLanguages.innerText = `${activeLangs.join('\n')}`
 
-            } else if (!l.tipo == langBrowser) {
-                reloadBody('<h1>' + 'Infelizmente, essa linguagem do seu navegador ainda não é suportada. :(' + '</h1>')
             }
         })
 
+        if (lang == false) return reloadBody('<h1>' + 'Infelizmente, essa linguagem do seu navegador ainda não é suportada. :(' + '</h1>');
 
-        if (!idText.innerText) {
-            reloadBody('<h1>' + 'Hmmm... Por algum motivo eu não consegui capturar a sua linguagem do navegador... Talvez a sua linguagem ainda não seja suportada... :/' + '</h1>')
-        }
+
+        if (!idText.innerText) return reloadBody('<h1>' + 'Hmmm... Por algum motivo eu não consegui capturar a sua linguagem do navegador... Tente recarregar esta página.' + '</h1>');
 
 
     } catch (err) {
