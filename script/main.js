@@ -33,11 +33,13 @@ readTextFile("../languages.json", function(text) {
     try {
 
         const langBrowser = navigator.language
+            //  const activeLangs = navigator.languages
 
         const languages = JSON.parse(text);
 
         const idText = document.getElementById('text')
         const langDetectada = document.getElementById('langDetectada');
+        //  const navigatorLanguages = document.getElementById('navigatorLanguages');
 
 
         languages.forEach(l => {
@@ -45,6 +47,8 @@ readTextFile("../languages.json", function(text) {
 
                 idText.innerText = l.texto
                 langDetectada.innerText = `Say "Hello World" with the browser language | ${l.tipo}`
+                    // navigatorLanguages.innerText = `${activeLangs.join('\n')}`
+
 
             } else if (!l.tipo == langBrowser) {
                 reloadBody('<h1>' + 'Infelizmente, essa linguagem do seu navegador ainda não é suportada. :(' + '</h1>')
@@ -61,7 +65,9 @@ readTextFile("../languages.json", function(text) {
         // Podemos adicionar mais uma linha no json para mudar essa frase de acordo com a linguagem do navegador...
         // mas depois eu tento fazer isso, deu uma preguiça agora
 
-        reloadBody('<h1>' + `Código: ${err.code ? 'Sem código' : err.code}\n Wups, parece que ocorreu algum erro! :/` + '</h1>')
+        let txt = '<h2>' + `Código: ${err.code ? undefined : 'Sem código'}` + '</h2>' + '<h1>' + '<br>' + 'Wups, parece que ocorreu algum erro! :/' + '</br>' + '<h1>'
+
+        reloadBody(txt)
         document.body.style.color = 'RED'
 
         console.log(err)
