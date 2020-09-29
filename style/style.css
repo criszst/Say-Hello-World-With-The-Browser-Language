@@ -1,8 +1,16 @@
     body {
         background: #0a2a43;
         max-height: 1500px;
-        /*  scrollbar-face-color: #3809e0;
-    scrollbar-track-color: #3809e0; */
+    }
+    
+    body::-webkit-scrollbar {
+        width: 7px;
+        height: 22px;
+        background: #ffffff;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background: #04338b;
     }
     
     img {
