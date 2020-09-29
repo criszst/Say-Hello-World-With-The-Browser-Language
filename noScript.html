@@ -14,10 +14,29 @@
 </head>
 
 <body class="reload">
-
+    <noscript id="navigatorJs">
     <h1 style="color: white; text-align: center; margin-top: 195px;"> Ops, o seu navegador está com o JavaScript desabilitado. Portanto, algumas funções não irão funcionar corretamente. Para ter uma experiência completa, abilite-o.</h1>
 
     <p style="color: white; text-align: center; margin-top: 50px;">Quando habilitar, clique <a href="index.html">aqui</a> para você ser redirecionado para a página principal.</p>
+</noscript>
+
+    <script type="text/javascript">
+        let navigatorJs = document.getElementById('navigatorJs')
+
+        if (navigatorJs) {
+            navigatorJs.parentNode.removeChild(navigatorJs)
+
+            document.body.innerHTML = '<h1>' + 'O seu JavaScript já está habilitado. ^' + '</h1>'
+            document.body.style.textAlign = 'center'
+            document.body.style.marginTop = '305px'
+            document.body.style.color = 'WHITE'
+
+
+            setInterval(function() {
+                window.location.href = 'index.html'
+            }, 1000 * 2)
+        }
+    </script>
 
 </body>
 
