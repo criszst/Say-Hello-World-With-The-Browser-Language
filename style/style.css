@@ -51,7 +51,7 @@
         z-index: 10000;
         mix-blend-mode: color;
     }
-    /* Id */
+    /* Class */
     
     .reload {
         animation: reload;
