@@ -1,3 +1,16 @@
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
+
+
 function reloadBody(text) {
     const div = document.getElementById('divContainer')
     div.parentNode.removeChild(div)
@@ -14,22 +27,13 @@ function reloadBody(text) {
     document.body.style.marginTop = '300px'
 
     document.body.style.fontSize = '100px'
+
 }
 
-function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
-}
 
 
 readTextFile("../languages.json", function(text) {
+
     try {
 
         const langBrowser = navigator.language
@@ -56,22 +60,21 @@ readTextFile("../languages.json", function(text) {
             }
         })
 
+
         if (lang == false) return reloadBody('<h1>' + 'Infelizmente, essa linguagem do seu navegador ainda não é suportada. :(' + '</h1>');
 
 
-        if (!idText.innerText) return reloadBody('<h1>' + 'Hmmm... Por algum motivo eu não consegui capturar a sua linguagem do navegador... Tente recarregar esta página.' + '</h1>');
+        if (!idText.innerText) return reloadBody('<h1>' + 'Hmmm... Por algum motivo eu não consegui capturar a sua linguagem do navegador... Recarregue esta página e tente novamente.' + '</h1>');
 
 
     } catch (err) {
-        // Podemos adicionar mais uma linha no json para mudar essa frase de acordo com a linguagem do navegador...
-        // mas depois eu tento fazer isso, deu uma preguiça agora
-
         let txt = '<h2>' + `Código: ${err.code ? undefined : 'Sem código'}` + '</h2>' + '<h1>' + '<br>' + 'Wups, parece que ocorreu algum erro! :/' + '</br>' + '<h1>'
 
         reloadBody(txt)
         document.body.style.color = 'RED'
 
         console.log(err)
+
     }
 
 });

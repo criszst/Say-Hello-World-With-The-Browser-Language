@@ -5,11 +5,11 @@
     scrollbar-track-color: #3809e0; */
     }
     
-    .fadeIn {
-        animation: fadeIn 2s linear;
+    .reload {
+        animation: reload 2s linear;
     }
     
-    @keyframes fadeIn {
+    @keyframes reload {
         from {
             opacity: 0;
         }
