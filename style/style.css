@@ -5,17 +5,19 @@
     scrollbar-track-color: #3809e0; */
     }
     
-    .reload {
-        animation: reload 2s linear;
+    img {
+        max-width: 100%;
+        height: auto;
     }
     
-    @keyframes reload {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: initial;
-        }
+    p {
+        word-wrap: keep-all;
+    }
+    
+    a {
+        transition: 1s;
+        transition-delay: 0s;
+        transition-duration: 5s;
     }
     
     section {
@@ -49,8 +51,26 @@
         z-index: 10000;
         mix-blend-mode: color;
     }
+    /* Id */
     
-    #text {
+    .reload {
+        animation: reload;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-direction: normal;
+        /* animation-direction: alternate-reverse; */
+    }
+    
+    @keyframes reload {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: initial;
+        }
+    }
+    
+    .helloWord {
         position: relative;
         color: #fff;
         font-size: 10em;
@@ -58,6 +78,6 @@
         font-family: cursive;
     }
     
-    #end {
+    .end {
         z-index: 2;
     }
