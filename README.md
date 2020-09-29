@@ -10,7 +10,7 @@ Para quem for fazer um download deste projeto (ou algo do tipo), infelizmente, c
 
 
 
- #Contribuições
+ # Contribuições
  Caso você queria contribuir com este projeto com uma Pull Request, sinta-se livre! :D
 
 (Como é apenas um site que fiz por "diversão", as traduções de **Hello Word** foram feitos pelo Google Tradutor)
