@@ -34,6 +34,7 @@
 
             //https://stackoverflow.com/questions/40954960/read-an-external-local-json-file-into-javascript
         }
+
         readTextFile("languages.json", function(text) {
             let navigatorJs = document.getElementById('navigatorJs')
 
@@ -55,12 +56,10 @@
                         document.body.innerHTML = '<h1>' + l.noScriptMessage + '</h1>'
                         langContext = true
 
-                        // navigatorLanguages.innerText = `${activeLangs.join('\n')}`
-
                     }
                 })
 
-                if (langContext == false) document.body.innerHTML = '<h1>' + 'Your JavaScript is already enabled. ^' + '</h1>'
+                if (langContext == false) return document.body.innerHTML = '<h1>' + 'Your JavaScript is already enabled. ^' + '</h1>';
 
 
                 setInterval(function() {
