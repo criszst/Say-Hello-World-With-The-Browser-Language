@@ -2,152 +2,176 @@
 
     {
         "tipo": "ar",
-        "texto": "مرحبا بالعالم!"
-    },
-
-    {
-        "tipo": "da",
-        "texto": "Hej Verden!"
-    },
-
-    {
-        "tipo": "de",
-        "texto": "Hallo Welt!"
-    },
-
-    {
-        "tipo": "el",
-        "texto": "Γειά σου Κόσμε!"
-    },
-
-    {
-        "tipo": "en",
-        "texto": "Hello Word!"
-    },
-
-    {
-        "tipo": "es",
-        "texto": "¡Hola mundo!"
-    },
-
-    {
-        "tipo": "ko",
-        "texto": "안녕하세요!"
-    },
-
-    {
-        "tipo": "sk",
-        "texto": "Ahoj Svet!"
-    },
-
-    {
-        "tipo": "sl",
-        "texto": "Pozdravljen, svet!"
-    },
-
-    {
-        "tipo": "fi",
-        "texto": "Hei maailma!"
-    },
-
-    {
-        "tipo": "fr",
-        "texto": "Bonjour le monde!"
-    },
-
-    {
-        "tipo": "nl",
-        "texto": "Hallo Wereld!"
-    },
-
-    {
-        "tipo": "nl",
-        "texto": "Hallo Wereld!"
-    },
-
-    {
-        "tipo": "hu",
-        "texto": "Helló Világ!"
-    },
-
-    {
-        "tipo": "id",
-        "texto": "Halo Dunia!"
-    },
-
-    {
-        "tipo": "it",
-        "texto": "Ciao mondo!"
-    },
-
-    {
-        "tipo": "ja",
-        "texto": "こんにちは世界"
-    },
-
-    {
-        "tipo": "pl",
-        "texto": "Witaj świecie!"
-    },
-
-    {
-        "tipo": "pt-BR",
-        "texto": "Olá Mundo!"
-    },
-
-    {
-        "tipo": "pt-PT",
-        "texto": "Olá Mundo!"
-    },
-
-    {
-        "tipo": "ro",
-        "texto": "Salut Lume!"
-    },
-
-    {
-        "tipo": "ru",
-        "texto": "Привет мир!"
-    },
-
-    {
-        "tipo": "sr-Cyrl",
-        "texto": "Здраво Свете!"
-    },
-
-    {
-        "tipo": "sr",
-        "texto": "Здраво Свете!"
-    },
-
-    {
-        "tipo": "sv",
-        "texto": "Hej världen!"
-    },
-
-    {
-        "tipo": "th",
-        "texto": "สวัสดีชาวโลก!"
+        "texto": "مرحبا بالعالم!",
+        "noScriptMessage": "جافا سكريبت الخاص بك ممكّن بالفعل. "
     },
 
     {
         "tipo": "cs",
-        "texto": "Ahoj světe!"
+        "texto": "Ahoj světe!",
+        "noScriptMessage": "Váš JavaScript je již povolen."
+    },
+
+    {
+        "tipo": "da",
+        "texto": "Hej Verden!",
+        "noScriptMessage": "Din JavaScript er allerede aktiveret."
+    },
+
+    {
+        "tipo": "de",
+        "texto": "Hallo Welt!",
+        "noScriptMessage": "Ihr JavaScript ist bereits aktiviert."
+    },
+
+    {
+        "tipo": "el",
+        "texto": "Γειά σου Κόσμε!",
+        "noScriptMessage": "Το JavaScript σας είναι ήδη ενεργοποιημένο."
+    },
+
+    {
+        "tipo": "en",
+        "texto": "Hello Word!",
+        "noScriptMessage": "Your JavaScript is already enabled. ^^"
+    },
+
+    {
+        "tipo": "es",
+        "texto": "¡Hola mundo!",
+        "noScriptMessage": "Tu JavaScript ya está habilitado. ^^"
+    },
+
+    {
+        "tipo": "ko",
+        "texto": "안녕하세요!",
+        "noScriptMessage": "JavaScript가 이미 활성화되어 있습니다."
+    },
+
+    {
+        "tipo": "sk",
+        "texto": "Ahoj Svet!",
+        "noScriptMessage": "Váš JavaScript je už povolený."
+    },
+
+    {
+        "tipo": "sl",
+        "texto": "Pozdravljen, svet!",
+        "noScriptMessage": "Vaš JavaScript je že omogočen."
+    },
+
+    {
+        "tipo": "fi",
+        "texto": "Hei maailma!",
+        "noScriptMessage": "JavaScript on jo käytössä."
+    },
+
+    {
+        "tipo": "fr",
+        "texto": "Bonjour le monde!",
+        "noScriptMessage": "Votre JavaScript est déjà activé."
+    },
+
+    {
+        "tipo": "nl",
+        "texto": "Hallo Wereld!",
+        "noScriptMessage": "Je JavaScript is al ingeschakeld."
+    },
+
+    {
+        "tipo": "hu",
+        "texto": "Helló Világ!",
+        "noScriptMessage": "JavaScript már engedélyezve van."
+    },
+
+    {
+        "tipo": "id",
+        "texto": "Halo Dunia!",
+        "noScriptMessage": "JavaScript Anda sudah diaktifkan."
+    },
+
+    {
+        "tipo": "it",
+        "texto": "Ciao mondo!",
+        "noScriptMessage": "Il tuo JavaScript è già abilitato."
+    },
+
+    {
+        "tipo": "ja",
+        "texto": "こんにちは世界",
+        "noScriptMessage": "JavaScriptはすでに有効になっています。"
+    },
+
+    {
+        "tipo": "pl",
+        "texto": "Witaj świecie!",
+        "noScriptMessage": "Twój JavaScript jest już włączony."
+    },
+
+    {
+        "tipo": "pt-BR",
+        "texto": "Olá Mundo!",
+        "noScriptMessage": "O seu JavaScript já está habilitado. ^"
+    },
+
+    {
+        "tipo": "pt-PT",
+        "texto": "Olá Mundo!",
+        "noScriptMessage": "O seu JavaScript já está habilitado."
+    },
+
+    {
+        "tipo": "ro",
+        "texto": "Salut Lume!",
+        "noScriptMessage": "JavaScript-ul dvs. este deja activat."
+    },
+
+    {
+        "tipo": "ru",
+        "texto": "Привет мир!",
+        "noScriptMessage": "Ваш JavaScript уже включен."
+    },
+
+    {
+        "tipo": "sr-Cyrl",
+        "texto": "Здраво Свете!",
+        "noScriptMessage": "Ваш ЈаваСцрипт је већ омогућен."
+    },
+
+    {
+        "tipo": "sr",
+        "texto": "Здраво Свете!",
+        "noScriptMessage": "Ваш ЈаваСцрипт је већ омогућен."
+    },
+
+    {
+        "tipo": "sv",
+        "texto": "Hej världen!",
+        "noScriptMessage": "Din JavaScript är redan aktiverad."
+    },
+
+    {
+        "tipo": "th",
+        "texto": "สวัสดีชาวโลก!",
+        "noScriptMessage": "เปิดใช้งาน JavaScript ของคุณแล้ว"
     },
 
     {
         "tipo": "tr",
-        "texto": "Selam Dünya!"
+        "texto": "Selam Dünya!",
+        "noScriptMessage": "JavaScript'iniz zaten etkinleştirildi."
     },
 
     {
         "tipo": "zh-CN",
-        "texto": "你好，世界!"
+        "texto": "你好，世界!",
+        "noScriptMessage": "您的JavaScript已启用。"
     },
 
     {
         "tipo": "zh-TW",
-        "texto": "你好，世界"
+        "texto": "你好，世界",
+        "noScriptMessage": "您的JavaScript已啟用。"
     }
 
 ]

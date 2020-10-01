@@ -8,6 +8,8 @@ function readTextFile(file, callback) {
         }
     }
     rawFile.send(null);
+
+    //https://stackoverflow.com/questions/40954960/read-an-external-local-json-file-into-javascript
 }
 
 
@@ -32,7 +34,7 @@ function reloadBody(text) {
 
 
 
-readTextFile("../languages.json", function(text) {
+readTextFile("languages.json", function(text) {
 
     try {
 
@@ -60,15 +62,13 @@ readTextFile("../languages.json", function(text) {
             }
         })
 
+        if (lang == false) return reloadBody('<h1>' + 'Unfortunately, your browser language is not yet supported. :(' + '</h1>');
 
-        if (lang == false) return reloadBody('<h1>' + 'Infelizmente, essa linguagem do seu navegador ainda não é suportada. :(' + '</h1>');
-
-
-        if (!idText.innerText) return reloadBody('<h1>' + 'Hmmm... Por algum motivo eu não consegui capturar a sua linguagem do navegador... Recarregue esta página e tente novamente.' + '</h1>');
+        if (!idText.innerText) return reloadBody('<h1>' + "Hmmm... For some reason, I can't capture the language of your browser... Reload this page and try again." + '</h1>');
 
 
     } catch (err) {
-        let txt = '<h2>' + `Código: ${err.code ? undefined : 'Sem código'}` + '</h2>' + '<h1>' + '<br>' + 'Wups, parece que ocorreu algum erro! :/' + '</br>' + '<h1>'
+        let txt = '<h2>' + `Code: ${err.code ? undefined : 'Without code'}` + '</h2>' + '<h1>' + '<br>' + 'Ups, it looks like there was an error :/' + '</br>' + '<h1>'
 
         reloadBody(txt)
         document.body.style.color = 'RED'
