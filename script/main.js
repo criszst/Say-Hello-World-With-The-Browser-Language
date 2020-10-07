@@ -15,7 +15,12 @@ function readTextFile(file, callback) {
 
 function reloadBody(text) {
     const div = document.getElementById('divContainer')
-    div.parentNode.removeChild(div)
+
+    if (div.parentNode) {
+        div.parentNode.removeChild(div)
+    } else {
+        div.innerHTML = ''
+    }
 
     document.body.innerHTML = text
 
