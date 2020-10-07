@@ -18,7 +18,7 @@
     <h1 style="color: white; text-align: center; margin-top: 195px;"> Oops, your browser has JavaScript disabled. Therefore, some functions will not work correctly. To have a complete experience, enable it.</h1>
 
     <p style="color: white; text-align: center; margin-top: 50px;">When you enable it, click <a href="index.html">here</a> to be redirected to the main page.</p>
-</noscript>
+    </noscript>
 
     <script type="text/javascript">
         function readTextFile(file, callback) {
@@ -53,13 +53,13 @@
                 languages.forEach(l => {
                     if (l.tipo == langBrowser) {
 
-                        document.body.innerHTML = '<h1>' + l.noScriptMessage + '</h1>'
+                        document.body.innerHTML = '<h1>' + l.javascriptEnabledMessage + '</h1>'
                         langContext = true
 
                     }
                 })
 
-                if (langContext == false) return document.body.innerHTML = '<h1>' + 'Your JavaScript is already enabled. ^' + '</h1>';
+                if (langContext == false || document.body.innerText == 'undefined') return document.body.innerHTML = '<h1>' + 'Your JavaScript is already enabled. ^' + '</h1>';
 
 
                 setInterval(function() {
