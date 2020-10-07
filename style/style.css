@@ -56,7 +56,6 @@
         width: 100%;
         height: 100%;
         background: #0a2a43;
-        z-index: 1000;
         mix-blend-mode: color;
     }
     /* Class */
@@ -84,7 +83,9 @@
         font-size: 10em;
         z-index: 1;
         font-family: cursive;
+        -moz-user-select: text;
         -webkit-user-select: text;
+        -ms-user-select: text;
     }
     
     .end {
