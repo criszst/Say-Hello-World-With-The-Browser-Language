@@ -84,6 +84,7 @@
         font-size: 10em;
         z-index: 1;
         font-family: cursive;
+        -webkit-user-select: text;
     }
     
     .end {

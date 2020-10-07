@@ -39,14 +39,13 @@ function reloadBody(text) {
 
 
 
+
 readTextFile("languages.json", function(text) {
-
     try {
-
         const langBrowser = navigator.language
             //  const activeLangs = navigator.languages
 
-        const languages = JSON.parse(text);
+        const languages = JSON.parse(text)
 
         const idText = document.getElementById('text')
         const langDetectada = document.getElementById('langDetectada');
