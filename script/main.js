@@ -16,14 +16,15 @@ function readTextFile(file, callback) {
 function reloadBody(text) {
     const div = document.getElementById('divContainer')
 
-    if (div.parentNode !== null) {
+    if (div && div.parentNode !== null) {
         div.parentNode.removeChild(div)
     } else {
-        div.innerHTML = ''
+        document.body.innerHTML = ''
     }
 
     document.body.innerHTML = text
 
+    document.body.style.backgroundColor = '#0a2a43'
 
     document.body.style.color = 'WHITE'
 

@@ -1,4 +1,4 @@
-var txt = document.getElementById('text')
+const txt = document.getElementById('text')
 
 document.onkeypress = function() {
     let keyPress = event.keyCode

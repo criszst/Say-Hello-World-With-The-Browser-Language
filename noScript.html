@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>No Script</title>
+    <title>JavaScript disabled</title>
 
 </head>
 
@@ -19,6 +19,7 @@
 
     <p style="color: white; text-align: center; margin-top: 50px;">When you enable it, click <a href="index.html">here</a> to be redirected to the main page.</p>
     </noscript>
+
 
     <script type="text/javascript">
         function readTextFile(file, callback) {
@@ -36,36 +37,52 @@
         }
 
         readTextFile("languages.json", function(text) {
+            const langBrowser = navigator.language
+
+            const languages = JSON.parse(text);
+
+            const st = {
+                'pageNumber': 1,
+            }
+
+            const title = ''
+
             let navigatorJs = document.getElementById('navigatorJs')
 
-            if (navigatorJs) {
+            if (navigatorJs && navigatorJs.parentNode !== null) {
                 navigatorJs.parentNode.removeChild(navigatorJs)
-
-                document.body.style.textAlign = 'center'
-                document.body.style.marginTop = '305px'
-                document.body.style.color = 'WHITE'
-
-                const langBrowser = navigator.language
-
-                const languages = JSON.parse(text);
-
-                let langContext = false
-                languages.forEach(l => {
-                    if (l.tipo == langBrowser) {
-
-                        document.body.innerHTML = '<h1>' + l.javascriptEnabledMessage + '</h1>'
-                        langContext = true
-
-                    }
-                })
-
-                if (langContext == false || document.body.innerText == 'undefined') return document.body.innerHTML = '<h1>' + 'Your JavaScript is already enabled. ^' + '</h1>';
-
-
-                setInterval(function() {
-                    window.location.href = 'index.html'
-                }, 1000 * 3)
+            } else {
+                document.body.innerHTML = ''
+                document.body.style.backgroundColor = '#0a2a43'
             }
+
+            document.title = 'JavaScript enabled'
+
+            document.body.style.textAlign = 'center'
+            document.body.style.marginTop = '305px'
+            document.body.style.color = 'WHITE'
+
+            window.history.pushState(st, title)
+
+
+            let langContext = false
+
+            languages.forEach(l => {
+                if (l.tipo == langBrowser) {
+
+                    document.body.innerHTML = '<h1>' + l.javascriptEnabledMessage + '</h1>'
+                    langContext = true
+
+                }
+            })
+
+            if (langContext == false || document.body.innerText == 'undefined') return document.body.innerHTML = '<h1>' + 'Your JavaScript is already enabled. ^' + '</h1>';
+
+
+            setInterval(function() {
+                window.location.href = 'index.html'
+            }, 1000 * 3)
+
         })
     </script>
 
