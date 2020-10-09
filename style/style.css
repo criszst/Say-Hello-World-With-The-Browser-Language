@@ -22,7 +22,7 @@
         word-wrap: keep-all;
     }
     
-    a:hover {
+    a {
         transition: 1.5s;
         transition-delay: 0s;
         transition-duration: 4.3s;
