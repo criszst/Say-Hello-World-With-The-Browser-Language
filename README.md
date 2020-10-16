@@ -15,4 +15,4 @@ https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Hello-A
 Para quem for fazer um download deste projeto (ou algo do tipo), infelizmente, caso você rode ele no Chrome, algumas funções não irão funcionar normalmente. Para todas funcionarem, você precisa ter um "serviço web local" (como um localhost)                     
 https://stackoverflow.com/questions/10752055/cross-origin-requests-are-only-supported-for-http-error-when-loading-a-local
 
-E é claro, como é apenas um site que fiz por "diversão", as traduções dos textos foram feitas pelo Google Tradutor)
+E é claro, como é apenas um site que fiz por "diversão", as traduções dos textos foram feitas pelo Google Tradutor
