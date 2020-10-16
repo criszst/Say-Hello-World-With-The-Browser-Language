@@ -1,6 +1,6 @@
     body {
         background: #0a2a43;
-        max-height: 1500px;
+        max-height: 1700px;
     }
     
     body::-webkit-scrollbar {
@@ -60,15 +60,15 @@
     }
     /* Class */
     
-    .reload {
-        animation: reload;
+    .loading {
+        animation: loading;
         animation-duration: 2s;
         animation-timing-function: linear;
         animation-direction: normal;
         /* animation-direction: alternate-reverse; */
     }
     
-    @keyframes reload {
+    @keyframes loading {
         from {
             opacity: 0;
         }
@@ -90,4 +90,10 @@
     
     .end {
         z-index: 2;
+    }
+    
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }

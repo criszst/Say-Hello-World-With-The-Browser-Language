@@ -20,11 +20,11 @@ function reloadBody(text) {
         div.parentNode.removeChild(div)
     } else {
         document.body.innerHTML = ''
+        document.body.style.backgroundColor = '#0a2a43'
     }
 
     document.body.innerHTML = text
 
-    document.body.style.backgroundColor = '#0a2a43'
 
     document.body.style.color = 'WHITE'
 
@@ -40,18 +40,17 @@ function reloadBody(text) {
 
 
 
-
 readTextFile("languages.json", function(text) {
     try {
         const langBrowser = navigator.language
-            //  const activeLangs = navigator.languages
+        const navigatorLanguages = navigator.languages
 
         const languages = JSON.parse(text)
 
         const idText = document.getElementById('text')
         const langDetectada = document.getElementById('langDetectada');
 
-        //  const navigatorLanguages = document.getElementById('navigatorLanguages');
+        const activeLangs = document.getElementById('activeLangs');
 
         let lang = false
 
@@ -59,10 +58,12 @@ readTextFile("languages.json", function(text) {
             if (l.tipo == langBrowser) {
 
                 idText.innerText = l.texto
-                langDetectada.innerText = `Say "Hello World" with the browser language | ${l.tipo}`
-                lang = true
+                document.title = l.texto
 
-                // navigatorLanguages.innerText = `${activeLangs.join('\n')}`
+                langDetectada.innerText = `Say "Hello World" with the browser language | ${l.tipo}`
+                activeLangs.innerText = `[${langBrowser}] ${navigatorLanguages.join('\n').replace(langBrowser, '')}`
+
+                lang = true
 
             }
         })
@@ -73,7 +74,7 @@ readTextFile("languages.json", function(text) {
 
 
     } catch (err) {
-        let txt = '<h2>' + `Code: ${err.code ? undefined : 'Without code'}` + '</h2>' + '<h1>' + '<br>' + 'Ups, it looks like there was an error :/' + '</br>' + '<h1>'
+        let txt = '<h1>' + 'Ups, it looks like there was an error :/' + '</h1>' + '<p style="font-size: 20px">' + '<br>' + `${err.message} (Code: ${err.code ? undefined : 'Without code'})` + '</br>' + '<p>'
 
         reloadBody(txt)
         document.body.style.color = 'RED'

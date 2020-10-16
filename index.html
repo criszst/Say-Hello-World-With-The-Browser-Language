@@ -17,20 +17,57 @@
 
     </noscript>
 
-    <title>Hello Word</title>
+    <title></title>
 
 </head>
 
-<body class="reload">
+<body class="loading">
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #0a2a43;">
+
+            <div class="container">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu Colapso">
+
+                    <span class="material-icons">
+                        home
+                        </span>
+
+                </button>
+
+                <div id="menu" class="navbar-collapse collapse">
+
+                    <ul class="navbar-nav mr-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" style="margin-left: 5px;" href="https://github.com/Adrian-Cristian/Say-Hello-World-With-The-Browser-Language">Github</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
     <div class="container" id="divContainer">
 
         <div style="background-color: #142736" class="end">
 
             <section>
-                <h1 style="text-align: center; margin-top: -300px; margin-left: 50px;" class="helloWord" id="text" title='Press "C" key to copy this text'></h1>
+
+                <h1 style="text-align: center; margin-top: -230px; margin-left: 50px;" class="helloWord" id="text" title='Press "C" key to copy this text'></h1>
 
 
                 <script type="text/javascript">
+                    const text = document.getElementById('text');
+
                     window.addEventListener('scroll', function() {
                         var value = window.scrollY;
                         text.style.top = value * 1 + 'px';
@@ -44,6 +81,7 @@
 
         <div>
             <div style="color: white; text-align: center; margin-top: 170px">
+
                 <h1 id="langDetectada"></h1>
 
                 <p>
@@ -55,34 +93,28 @@
 
             </div>
 
-            <!-- <p id="navigatorLanguages"></p> -->
+            <div style="margin-top: 300px">
 
-            <div style="border-color: #0a2a43; margin-left: 38%; width: 18rem" class="card">
-                <img class="card-img-top img-fluid" src="https://img.ibxk.com.br/2020/06/15/15112221306044.jpg" alt="Github image">
+                <div class="dropdown center">
 
-                <div class="card-body">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Ver linguagens ativas
+                    </button>
 
-                    <h5 class="card-title">Github</h5>
-                    <p class="card-text">
-                        Caso você queira ver o código fonte deste site, clique no botão abaixo!
-                    </p>
+                    <div class="dropdown-menu" id="activeLangs">
 
-                    <a style="border-radius: 20px;" href="https://github.com/Adrian-Cristian/Say-Hello-World-With-The-Browser-Language" target="_blank" class="btn btn-primary btn-lg btn-block">Ir</a>
+                    </div>
 
                 </div>
-
 
             </div>
 
 
         </div>
 
-
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 
 </body>
