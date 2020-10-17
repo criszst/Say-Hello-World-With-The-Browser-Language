@@ -52,7 +52,7 @@ readTextFile("languages.json", function(text) {
 
         const activeLangs = document.getElementById('activeLangs');
 
-        let lang = false
+        let supportedLang = false
 
         languages.forEach(l => {
             if (l.tipo == langBrowser) {
@@ -63,12 +63,12 @@ readTextFile("languages.json", function(text) {
                 langDetectada.innerText = `Say "Hello World" with the browser language | ${l.tipo}`
                 activeLangs.innerText = `[${langBrowser}] ${navigatorLanguages.join('\n').replace(langBrowser, '')}`
 
-                lang = true
+                supportedLang = true
 
             }
         })
 
-        if (lang == false) return reloadBody('<h1>' + 'Unfortunately, your browser language is not yet supported. :(' + '</h1>');
+        if (supportedLang == false) return reloadBody('<h1>' + 'Unfortunately, your browser language is not yet supported. :(' + '</h1>');
 
         if (!idText.innerText) return reloadBody('<h1>' + "Hmmm... For some reason, I can't capture the language of your browser... Reload this page and try again." + '</h1>');
 
