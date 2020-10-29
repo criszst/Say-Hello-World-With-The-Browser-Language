@@ -10,6 +10,7 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta name='description' content="Just a simple website to speak a 'Hello World' based on the user's browser language.">
+    <meta name="keywords" content="say hello world with the browser language, hello world with the browser language">
 
     <noscript>
 
@@ -33,7 +34,7 @@
 
                     <span class="material-icons">
                         home
-                        </span>
+                    </span>
 
                 </button>
 
@@ -42,7 +43,7 @@
                     <ul class="navbar-nav mr-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link" style="margin-left: 5px;" href="https://github.com/Adrian-Cristian/Say-Hello-World-With-The-Browser-Language">Github</a>
+                            <a class="nav-link" style="margin-left: 5px;" href="https://github.com/Adrian-Cristian/Say-Hello-World-With-The-Browser-Language" target="_blank">Github</a>
                         </li>
 
                     </ul>
@@ -58,63 +59,27 @@
 
     <div class="container" id="divContainer">
 
-        <div style="background-color: #142736" class="end">
+        <div style="background-color: #0a2a43;">
 
-            <section>
+            <div style="justify-content: center;" id="divText">
+                <h1 style="text-align: center; margin-top: 100px; margin-left: -20px;" class="helloWord" id="text" title='Press "C" key to copy this text'></h1>
 
-                <h1 style="text-align: center; margin-top: -230px; margin-left: 50px;" class="helloWord" id="text" title='Press "C" key to copy this text'></h1>
+            </div>
 
+            <div class="center">
 
-                <script type="text/javascript">
-                    const text = document.getElementById('text');
+                <button class="btn btn-outline-primary" style="text-align: center; margin-top: 50px;" id="btnCopy" onclick="btnCopy()">Copy</button>
 
-                    window.addEventListener('scroll', function() {
-                        var value = window.scrollY;
-                        text.style.top = value * 1 + 'px';
-                    })
-                </script>
-
-            </section>
+            </div>
 
         </div>
 
 
-        <div>
-            <div style="color: white; text-align: center; margin-top: 170px">
+    </div>
 
-                <h1 id="langDetectada"></h1>
-
-                <p>
-
-                    Este site detecta o idioma do seu navegador e fala "Hello World" com o idioma detectado. Apenas um simples site.
-                    <br> Uma ideia inspirada no repositório de <a href=" https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Hello-App.md" target="_blank">Florin Pop</a> </br>
-
-                </p>
-
-            </div>
-
-            <div style="margin-top: 300px">
-
-                <div class="dropdown center">
-
-                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Ver linguagens ativas
-                    </button>
-
-                    <div class="dropdown-menu" id="activeLangs">
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 
 </body>

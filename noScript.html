@@ -15,9 +15,11 @@
 
 <body class="reload">
     <noscript id="navigatorJs">
-    <h1 style="color: white; text-align: center; margin-top: 195px;"> Oops, your browser has JavaScript disabled. Therefore, some functions will not work correctly. To have a complete experience, enable it.</h1>
+        
+    <h1 style="color: white; text-align: center; margin-top: 185px;"> Oops, your browser has JavaScript disabled. Therefore, some functions will not work correctly. To have a complete experience, enable it.</h1>
 
     <p style="color: white; text-align: center; margin-top: 50px;">When you enable it, click <a href="index.html">here</a> to be redirected to the main page.</p>
+    
     </noscript>
 
 
@@ -49,6 +51,7 @@
 
             const navigatorJs = document.getElementById('navigatorJs')
 
+
             if (navigatorJs && navigatorJs.parentNode !== null) {
                 navigatorJs.parentNode.removeChild(navigatorJs)
             } else {
@@ -61,6 +64,7 @@
             document.body.style.textAlign = 'center'
             document.body.style.marginTop = '305px'
             document.body.style.color = 'WHITE'
+
 
             window.history.pushState(st, title)
 

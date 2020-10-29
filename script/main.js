@@ -43,28 +43,23 @@ function reloadBody(text) {
 readTextFile("languages.json", function(text) {
     try {
         const langBrowser = navigator.language
-        const navigatorLanguages = navigator.languages
 
         const languages = JSON.parse(text)
 
         const idText = document.getElementById('text')
-        const langDetectada = document.getElementById('langDetectada');
 
-        const activeLangs = document.getElementById('activeLangs');
 
         let supportedLang = false
 
         languages.forEach(l => {
             if (l.tipo == langBrowser) {
-
                 idText.innerText = l.texto
+
                 document.title = l.texto
 
-                langDetectada.innerText = `Say "Hello World" with the browser language | ${l.tipo}`
-                activeLangs.innerText = `[${langBrowser}] ${navigatorLanguages.join('\n').replace(langBrowser, '')}`
+                if (!document.title) document.title = 'Hello World'
 
                 supportedLang = true
-
             }
         })
 

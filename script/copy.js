@@ -1,23 +1,34 @@
 const txt = document.getElementById('text')
 
+function copy() {
+    const input = document.createElement('input')
+
+    input.value = txt.innerText
+
+    document.body.appendChild(input)
+
+    input.select();
+
+    document.execCommand('copy')
+
+    document.body.removeChild(input)
+
+}
+
+function btnCopy() {
+    copy()
+
+    alert('Copied!')
+}
+
 document.onkeypress = function() {
-    let keyPress = event.keyCode
+    const keyPress = event.keyCode
 
-    if (keyPress === 99) {
+    const key = String.fromCharCode(keyPress)
 
-        const input = document.createElement('input')
-
-        input.value = txt.innerText
-
-        document.body.appendChild(input)
-
-        input.select();
-
-        document.execCommand('copy')
-
-        document.body.removeChild(input)
+    if (key === 'c') {
+        copy()
 
         alert('Copied!')
-
     }
 }
