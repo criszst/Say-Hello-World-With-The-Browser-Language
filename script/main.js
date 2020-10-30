@@ -13,7 +13,7 @@ function readTextFile(file, callback) {
 }
 
 
-function reloadBody(text) {
+function buildBody(text) {
     const div = document.getElementById('divContainer')
 
     if (div && div.parentNode !== null) {
@@ -40,7 +40,7 @@ function reloadBody(text) {
 
 
 
-readTextFile("languages.json", function(text) {
+readTextFile("/languages.json", function(text) {
     try {
         const langBrowser = navigator.language
 
@@ -52,24 +52,23 @@ readTextFile("languages.json", function(text) {
         let supportedLang = false
 
         languages.forEach(l => {
-            if (l.tipo == langBrowser) {
+            if (l.tipo === langBrowser) {
                 idText.innerText = l.texto
-
                 document.title = l.texto
 
                 supportedLang = true
             }
         })
 
-        if (supportedLang == false) return reloadBody('<h1>' + 'Unfortunately, your browser language is not yet supported. :(' + '</h1>');
+        if (supportedLang === false) idText.innerText = 'Hello World!'
 
-        if (!idText.innerText) return reloadBody('<h1>' + "Hmmm... For some reason, I can't capture the language of your browser... Reload this page and try again." + '</h1>');
+        if (!idText.innerText) return buildBody('<h1>' + "Hmmm... For some reason, I can't capture the language of your browser... Reload this page and try again." + '</h1>');
 
 
     } catch (err) {
         let txt = '<h1>' + 'Ups, it looks like there was an error :/' + '</h1>' + '<p style="font-size: 20px">' + '<br>' + `${err.message} (Code: ${err.code ? undefined : 'Without code'})` + '</br>' + '<p>'
 
-        reloadBody(txt)
+        buildBody(txt)
         document.body.style.color = 'RED'
         document.title = 'Oops, there was an error...'
 
