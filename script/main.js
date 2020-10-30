@@ -57,8 +57,6 @@ readTextFile("languages.json", function(text) {
 
                 document.title = l.texto
 
-                if (!document.title) document.title = 'Hello World'
-
                 supportedLang = true
             }
         })
@@ -73,6 +71,7 @@ readTextFile("languages.json", function(text) {
 
         reloadBody(txt)
         document.body.style.color = 'RED'
+        document.title = 'Oops, there was an error...'
 
         console.log(err)
 

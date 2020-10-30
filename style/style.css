@@ -50,7 +50,7 @@
         position: relative;
         color: #fff;
         font-size: 10em;
-        font-family: cursive;
+        font-family: cursive, courier, arial, helvetica;
         -moz-user-select: text;
         -webkit-user-select: text;
         -ms-user-select: text;

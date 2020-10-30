@@ -21,14 +21,20 @@ function btnCopy() {
     alert('Copied!')
 }
 
-document.onkeypress = function() {
-    const keyPress = event.keyCode
+function keyPressed(evt) {
+    evt = evt || window.event
+    let key = evt.keyCode || evt.which
+    return String.fromCharCode(key);
+}
 
-    const key = String.fromCharCode(keyPress)
+document.onkeypress = function(evt) {
+    let str = keyPressed(evt)
 
-    if (key === 'c') {
+    if (str === 'c') {
         copy()
 
         alert('Copied!')
+    } else {
+        return;
     }
 }
