@@ -19,10 +19,9 @@
 
     <meta name="theme-color" content="#0a2a43" />
 
-    <!-- Windows Phone -->
+
     <meta name="msapplication-navbutton-color" content="#0a2a43" />
 
-    <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -94,7 +93,7 @@
             <div class="center">
 
                 <button class="btn btn-outline-primary" style="text-align: center; margin-top: 50px; border-radius: 15px;" id="btnCopy" onclick="btnCopy()">Copy</button>
-
+                <p id="output"></p>
             </div>
 
         </div>
@@ -104,17 +103,19 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>
 
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="languages.json"></script>
+    <script type="text/babel" src="script/main.js"></script>
+    <script type="text/babel" src="script/copy.js"></script>
 
 </body>
 
-<script type="text/javascript" src="languages.json"></script>
-<script type="text/javascript" src="script/main.js"></script>
-<script type="text/javascript" src="script/copy.js"></script>
 
-<script type="text/javascript">
-    if (!document.title) {
-        document.title = 'Hello World'
-    }
+
+<script type="text/babel">
+    if (!document.title) { document.title = 'Hello World' }
 </script>
+
+
 
 </html>

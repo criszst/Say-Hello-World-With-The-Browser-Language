@@ -25,6 +25,8 @@
     </noscript>
 
 
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <script type="text/javascript">
         function readTextFile(file, callback) {
             var rawFile = new XMLHttpRequest();
@@ -33,63 +35,63 @@
             rawFile.onreadystatechange = function() {
                 if (rawFile.readyState === 4 && rawFile.status == "200") {
                     callback(rawFile.responseText);
-                }
-            }
+                };
+            };
             rawFile.send(null);
 
             //https://stackoverflow.com/questions/40954960/read-an-external-local-json-file-into-javascript
-        }
+        };
 
         readTextFile("languages.json", function(text) {
-            const langBrowser = navigator.language
+            const langBrowser = navigator.language;
 
             const languages = JSON.parse(text);
 
             const st = {
                 'pageNumber': 1,
-            }
+            };
 
-            const title = ''
+            const title = '';
 
-            const navigatorJs = document.getElementById('navigatorJs')
+            const navigatorJs = document.getElementById('navigatorJs');
 
 
             if (navigatorJs.parentNode !== null) {
-                navigatorJs.parentNode.removeChild(navigatorJs)
+                navigatorJs.parentNode.removeChild(navigatorJs);
             } else {
                 document.body.innerHTML = ''
-                document.body.style.backgroundColor = '#0a2a43'
-            }
+                document.body.style.backgroundColor = '#0a2a43';
+            };
 
-            document.title = 'JavaScript enabled'
+            document.title = 'JavaScript enabled';
 
-            document.body.style.textAlign = 'center'
-            document.body.style.marginTop = '305px'
-            document.body.style.color = 'WHITE'
-
-
-            window.history.pushState(st, title)
+            document.body.style.textAlign = 'center';
+            document.body.style.marginTop = '305px';
+            document.body.style.color = 'WHITE';
 
 
-            let langContext = false
+            window.history.pushState(st, title);
+
+
+            let langContext = false;
 
             languages.forEach(l => {
                 if (l.tipo == langBrowser) {
 
-                    document.body.innerHTML = '<h1>' + l.javascriptEnabledMessage + '</h1>'
-                    langContext = true
+                    document.body.innerHTML = '<h1>' + l.javascriptEnabledMessage + '</h1>';
+                    langContext = true;
 
-                }
-            })
+                };
+            });
 
             if (langContext == false || document.body.innerText == 'undefined') return document.body.innerHTML = '<h1>' + 'Your JavaScript is already enabled. ^' + '</h1>';
 
 
             setTimeout(function() {
-                window.location.href = '/'
-            }, 1000 * 3)
+                window.location.href = '/';
+            }, 1000 * 3);
 
-        })
+        });
     </script>
 
 </body>

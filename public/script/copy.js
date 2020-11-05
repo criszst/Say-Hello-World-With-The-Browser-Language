@@ -1,37 +1,37 @@
-const txt = document.getElementById('text')
+const txt = document.getElementById('text');
 
 function copy() {
-    const input = document.createElement('input')
+    const input = document.createElement('input');
 
-    input.value = txt.innerText
+    input.value = txt.innerText;
 
-    document.body.appendChild(input)
+    document.body.appendChild(input);
 
     input.select();
 
-    document.execCommand('copy')
+    document.execCommand('copy');
 
-    document.body.removeChild(input)
+    document.body.removeChild(input);
 
-}
+};
 
 function btnCopy() {
-    copy()
+    copy();
 
     alert('Copied!')
-}
+};
 
 function keyPressed(evt) {
-    evt = evt || window.event
-    let key = evt.keyCode || evt.which
+    evt = evt || window.event;
+    let key = evt.keyCode || evt.which;
     return String.fromCharCode(key);
-}
+};
 
 document.onkeypress = function(evt) {
-    let str = keyPressed(evt)
+    let str = keyPressed(evt);
 
     if (str === 'c') {
-        copy()
+        copy();
 
         alert('Copied!')
     } else {
