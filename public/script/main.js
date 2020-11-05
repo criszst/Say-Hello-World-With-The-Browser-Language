@@ -40,7 +40,7 @@ function buildBody(text) {
 
 
 
-readTextFile("languages.json", function(text) {
+readTextFile("/languages.json", function(text) {
     try {
         const langBrowser = navigator.language
 

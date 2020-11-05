@@ -54,7 +54,7 @@
             const navigatorJs = document.getElementById('navigatorJs')
 
 
-            if (navigatorJs && navigatorJs.parentNode !== null) {
+            if (navigatorJs.parentNode !== null) {
                 navigatorJs.parentNode.removeChild(navigatorJs)
             } else {
                 document.body.innerHTML = ''
@@ -86,7 +86,7 @@
 
 
             setTimeout(function() {
-                window.location.href = 'index.html'
+                window.location.href = '/'
             }, 1000 * 3)
 
         })
