@@ -11,4 +11,5 @@ https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Hello-A
  Caso você queria contribuir com este projeto com uma Pull Request, sinta-se livre! :D
 
 
+# Observação
 Como é apenas um site que fiz por "diversão", as traduções dos textos foram feitas pelo Google Tradutor
