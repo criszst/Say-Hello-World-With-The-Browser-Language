@@ -60,7 +60,7 @@ readTextFile("/languages.json", function(text) {
             }
         })
 
-        if (supportedLang === false) idText.innerText = 'Hello World!'
+        if (supportedLang === false) window.location.href = '/unknownLanguage.html'
 
         if (!idText.innerText) return buildBody('<h1>' + "Hmmm... For some reason, I can't capture the language of your browser... Reload this page and try again." + '</h1>');
 

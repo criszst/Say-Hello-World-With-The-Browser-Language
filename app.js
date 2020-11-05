@@ -14,6 +14,14 @@ app.get('/noScript.html', function(req, res) {
     res.sendFile(__dirname + '/views/noScript.html');
 })
 
+app.get('/unknownLanguage.html', function(req, res) {
+    res.sendFile(__dirname + '/views/unknownLanguage.html');
+})
+
+app.get('/previewPage.html', function(req, res) {
+    res.sendFile(__dirname + '/views/previewPage.html')
+})
+
 
 app.get('/languages.json', function(req, res) {
     res.sendFile(route);
