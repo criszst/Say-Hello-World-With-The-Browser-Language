@@ -37,6 +37,12 @@
     },
 
     {
+        "tipo": "en-US",
+        "texto": "Hello World!",
+        "javascriptEnabledMessage": "Your Javascript is already enabled."
+    },
+
+    {
         "tipo": "es",
         "texto": "¡Hola mundo!",
         "javascriptEnabledMessage": "Tu JavaScript ya está habilitado. ^^"

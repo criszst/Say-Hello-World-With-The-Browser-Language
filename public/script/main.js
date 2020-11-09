@@ -52,7 +52,7 @@ readTextFile("/languages.json", function(text) {
         let supportedLang = false;
 
         languages.forEach(l => {
-            if (l.tipo === langBrowser) {
+            if (l.tipo.toLowerCase() === langBrowser.toLowerCase()) {
                 idText.innerText = l.texto;
                 document.title = l.texto;
 
@@ -62,7 +62,9 @@ readTextFile("/languages.json", function(text) {
 
         if (supportedLang === false) window.location.href = '/unknownLanguage.html';
 
-        if (!idText.innerText) return buildBody('<h1>' + "Hmmm... For some reason, I can't capture the language of your browser... Reload this page and try again." + '</h1>');
+        setTimeout(function() {
+            if (!idText.innerText) return buildBody('<h1>' + "Hmmm... For some reason, I can't capture the language of your browser... Reload this page and try again." + '</h1>');
+        }, 3000)
 
 
     } catch (err) {
