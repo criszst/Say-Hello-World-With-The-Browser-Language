@@ -76,7 +76,7 @@
             let langContext = false;
 
             languages.forEach(l => {
-                if (l.tipo == langBrowser) {
+                if (l.tipo.toLowerCase() == langBrowser.toLowerCase()) {
 
                     document.body.innerHTML = '<h1>' + l.javascriptEnabledMessage + '</h1>';
                     langContext = true;
