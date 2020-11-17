@@ -22,7 +22,7 @@ function btnCopy() {
 };
 
 
-document.onkeypress = function(evt) {
+document.onkeypress = () => {
     let key = event.keyCode
     let str_key = String.fromCharCode(key)
 
