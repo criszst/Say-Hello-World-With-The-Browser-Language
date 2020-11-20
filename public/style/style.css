@@ -1,5 +1,5 @@
     body {
-        background: #0a2a43;
+        background: #155263;
         max-height: 1700px;
     }
     
@@ -23,15 +23,25 @@
     }
     
     a {
+        color: #0babdb;
         transition: 1.5s;
         transition-delay: 0s;
         transition-duration: 4.3s;
     }
     /* Class */
     
+    .newHtml {
+        background-color: #155263;
+        height: 350px;
+        margin-top: 300px;
+        font-size: 100px;
+        text-align: center;
+        color: white;
+    }
+    
     .loading {
         animation: loading;
-        animation-duration: 2s;
+        animation-duration: 3s;
         animation-timing-function: linear;
         animation-direction: normal;
         /* animation-direction: alternate-reverse; */

@@ -25,16 +25,8 @@
         </div>
 
         <div class="center">
-
             <p style="color: white">
-                A página
-                <b>
-                <script>
-                    document.write(window.location.pathname.replace(window.location.pathname.charAt(0), ''));
-                </script>
-                </b> não foi encontrada ou não existe. Clique <a onclick="goBack()" style="color: #0babdb; cursor: pointer;"><u>aqui</u></a> para voltar à página anterior ou clique <a href="/" style="color: #0babdb;">aqui</a> para voltar
-                à página principal.
-
+                A página <b> <script> document.write(window.location.pathname.replace(window.location.pathname.charAt(0), '')); </script> </b> não foi encontrada ou não existe.
             </p>
 
         </div>
@@ -45,11 +37,5 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 </body>
-
-<script type="text/javascript">
-    function goBack() {
-        window.history.back()
-    }
-</script>
 
 </html>

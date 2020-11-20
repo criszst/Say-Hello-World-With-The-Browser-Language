@@ -17,11 +17,11 @@
 
 </head>
 
-<body class="reload">
+<body class="loading">
 
     <div class="container">
 
-        <div>
+        <div id="div_content">
 
             <div class="center">
                 <h1 style="color: white; text-align: center; margin-top: 215px">Unfortunately, you browser language is not yet supported. :(</h1>
@@ -34,27 +34,69 @@
 
             <div class="center">
                 <button class="btn btn-warning" style="margin-top: -60px; margin-left: 280px; width: 2px; height: 30px;" onclick="directToPage()">
-               <span class="material-icons center" style="margin-top: -5px">
+                    <span class="material-icons center" style="margin-top: -5px">
                         check
-               </span>
+                    </span>
+                </button>
 
             </div>
 
             <div class="center">
-                <p style="color: white; font-size: 13px; margin-top: 10px; margin-left: 60px">because of that, the text that will be there will be "Hello World"</p>
-
+                <p style="color: white; font-size: 13px; margin-top: 10px; margin-left: 40px">because of that, the text that will be there will be "Hello World"</p>
             </div>
 
         </div>
 
     </div>
 
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
 </body>
 
 
-<script type="text/babel">
+<script type="text/javascript">
+    function readTextFile(file, callback) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType("application/json");
+        rawFile.open("GET", file, true);
+        rawFile.onreadystatechange = function() {
+            if (rawFile.readyState === 4 && rawFile.status == "200") {
+                callback(rawFile.responseText);
+            };
+        };
+        rawFile.send(null);
+
+        //https://stackoverflow.com/questions/40954960/read-an-external-local-json-file-into-javascript
+    };
+
+    readTextFile('/languages.json', function(text) {
+        const lang_browser = navigator.language;
+
+        const languages = JSON.parse(text);
+
+        const idText = document.getElementById('text');
+
+        const content = document.getElementById('div_content');
+
+        let supportedLang = false;
+
+        languages.forEach(l => {
+            if (l.tipo.toLowerCase() === lang_browser.toLowerCase()) {
+                content.innerHTML = '<p>Ops, a sua linguagem já é suportada.</p>'
+                content.classList.add('newHtml')
+
+                content.style.marginTop = '235px'
+                content.style.fontSize = '50px'
+
+                setTimeout(function() {
+                    window.location.href = '/'
+                }, 2500)
+
+                supportedLang = true;
+            }
+        })
+
+        if (supportedLang === false) return;
+    })
+
     function directToPage() {
         window.location.href = '/previewPage.html';
     }

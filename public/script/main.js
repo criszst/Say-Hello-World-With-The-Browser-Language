@@ -20,22 +20,10 @@ function buildBody(text) {
         div.parentNode.removeChild(div)
     } else {
         document.body.innerHTML = '';
-        document.body.style.backgroundColor = '#0a2a43';
+        document.body.classList.add('newHtml');
     }
 
     document.body.innerHTML = text;
-
-
-    document.body.style.color = 'WHITE';
-
-    document.body.style.textAlign = 'center';
-
-    document.body.style.height = '350px';
-
-    document.body.style.marginTop = '300px';
-
-    document.body.style.fontSize = '100px';
-
 }
 
 
