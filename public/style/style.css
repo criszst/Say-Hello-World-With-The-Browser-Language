@@ -13,11 +13,6 @@
         background: #04338b;
     }
     
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-    
     p {
         word-wrap: keep-all;
     }
