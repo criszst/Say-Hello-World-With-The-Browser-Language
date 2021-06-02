@@ -1,6 +1,6 @@
 # Say-Hello-World-With-The-Browser-Language
 
-https://say-hello-world-with-the-browser-language.glitch.me/
+https://shwwbl.glitch.me/
 
 # Sobre
 Apenas um simples site que mostra um "Hello World" baseado na linguagem do navegador do usuário. Foi baseado um pouco no Github de Florin Pop, no repositório "app-ideas"           
