@@ -13,21 +13,19 @@
         background: #000000;
     }
     
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-    
     p {
         word-wrap: keep-all;
     }
     
     a {
         color: #0babdb;
-        transition: 1.5s;
-        transition-delay: 0s;
-        transition-duration: 4.3s;
     }
+
+    a:hover {
+        color: #0b799b;
+    }
+
+
     /* Class */
     
     .newHtml {
