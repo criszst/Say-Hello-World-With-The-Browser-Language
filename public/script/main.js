@@ -9,7 +9,7 @@ function readTextFile(file, callback) {
     };
     rawFile.send(null);
 
-    //https://stackoverflow.com/questions/40954960/read-an-external-local-json-file-into-javascript
+    // ---> https://stackoverflow.com/questions/40954960/read-an-external-local-json-file-into-javascript
 };
 
 
@@ -25,6 +25,18 @@ function buildBody(text) {
 
     document.body.innerHTML = text;
 }
+
+// Begin Responsive
+
+setInterval(() => {
+    if (window.innerWidth >= 601 && window.innerWidth <= 991) {
+        document.getElementById('btnInfo').style.marginLeft = '-15px';
+    } else if (window.innerWidth > 991) {
+        document.getElementById('btnInfo').style.marginLeft = '0px';
+    }
+}, 900)
+
+// End Responsive
 
 
 

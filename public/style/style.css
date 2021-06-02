@@ -10,7 +10,7 @@
     }
     
     body::-webkit-scrollbar-thumb {
-        background: #04338b;
+        background: #000000;
     }
     
     img {
@@ -56,11 +56,12 @@
         }
     }
     
-    .helloWord {
+    .helloWorld {
         position: relative;
         color: #fff;
         font-size: 10em;
         font-family: cursive, courier, arial, helvetica;
+        user-select: text;
         -moz-user-select: text;
         -webkit-user-select: text;
         -ms-user-select: text;
