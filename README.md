@@ -2,14 +2,14 @@
 
 https://shwwbl.glitch.me/
 
-# Sobre
-Apenas um simples site que mostra um "Hello World" baseado na linguagem do navegador do usuário. Foi baseado um pouco no Github de Florin Pop, no repositório "app-ideas"           
+# About this project
+A website that displays a "Hello World" depending on the user's browser language. It was inspired by Florin Pop's Github, in the repository "app-ideas"           
 https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Hello-App.md
 
 
- # Contribuições
- Caso você queria contribuir com este projeto com uma Pull Request, sinta-se livre! :D
+ # Contributions
+If you want to contribute to this repository, feel free!
 
 
-# Observação
-Como é apenas um site que fiz por "diversão", as traduções dos textos foram feitas pelo Google Tradutor
+# Obs
+As it is a site I made for fun and study, all translations into other languages were done with the help of Google Translate.
