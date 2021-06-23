@@ -5,6 +5,12 @@
         justify-content: center;
     }
     #btnInfo {
-        margin-left: -17px !important;
+        margin-left: 6px !important;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 991px) {
+    #btnInfo {
+        margin-left: 6px !important;
     }
 }
